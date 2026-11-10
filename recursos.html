@@ -10,122 +10,83 @@
 <style>
 :root{
   --cielo:#73CEEB;
-  --petroleo:rgba(1,91,120,.40);
-  --petroleo-solido:#015B78;
-  --azul-oscuro:rgba(20,38,65,.50);
-  --azul-oscuro-solido:#142641;
-  --claro:#F4FBFD;
-  --blanco:#FFFFFF;
+  --petroleo:#015B78;          /* se usa al 30% en las formas */
+  --azul:#142641;              /* se usa al 40% en las formas */
   --texto:#142641;
-  --gris:#526575;
-  --borde:#CBEAF4;
+  --gris:#3E5668;
+  --panel:rgba(255,255,255,.38);
+  --blanco:#fff;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--claro);color:var(--texto);font-family:"Ancizar Sans",sans-serif}
+body{margin:0;min-height:100vh;background:var(--cielo);color:var(--texto);font-family:"Ancizar Sans",sans-serif;position:relative}
 a{color:inherit;text-decoration:none}
-.topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:17px clamp(20px,6vw,86px);background:var(--cielo);color:var(--azul-oscuro-solido)}
-.brand{display:flex;align-items:center;gap:13px;font-weight:800;letter-spacing:.08em;font-size:.95rem}
-.brand-mark{width:42px;height:42px;border:1px solid rgba(20,38,65,.50);border-radius:50%;display:grid;place-items:center;font-size:1.1rem}
-.top-link{font-weight:700;border-bottom:1px solid rgba(20,38,65,.45);padding-bottom:3px}
-.hero{padding:clamp(58px,8vw,100px) clamp(22px,8vw,115px) 76px;background:linear-gradient(130deg,rgba(1,91,120,.40) 0%,rgba(115,206,235,1) 58%,rgba(20,38,65,.50) 100%);color:var(--azul-oscuro-solido);color:var(--azul-oscuro-solido);position:relative;overflow:hidden}
-.hero:after{content:"";position:absolute;width:420px;height:420px;border:1px solid #73CEEB55;border-radius:50%;right:-110px;top:-190px;box-shadow:0 0 0 55px #73CEEB18,0 0 0 110px #73CEEB12}
-.eyebrow{color:var(--petroleo-solido);text-transform:uppercase;letter-spacing:.16em;font-size:.82rem;font-weight:800}
-h1{position:relative;z-index:1;font-size:clamp(2.7rem,7vw,5.4rem);line-height:.98;max-width:900px;margin:18px 0 22px;font-weight:800}
-.hero p{position:relative;z-index:1;max-width:760px;margin:0;color:#294B60;font-size:clamp(1.1rem,2vw,1.3rem);line-height:1.65}
-main{max-width:1240px;margin:auto;padding:62px 24px 76px}
-.section-head{margin-bottom:30px}
-.section-kicker{color:var(--petroleo-solido);font-size:.82rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
-h2{color:var(--azul-oscuro-solido);font-size:clamp(2rem,4vw,2.8rem);margin:9px 0 12px}
-.section-head p{max-width:820px;color:var(--gris);font-size:1.13rem;line-height:1.6;margin:0}
+a:focus-visible{outline:3px solid var(--azul);outline-offset:3px}
+
+/* Fondo orgánico: formas superpuestas con la paleta de la identidad */
+.bg{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.bg .p{fill:#015B78;fill-opacity:.30}
+.bg .n{fill:#142641;fill-opacity:.40}
+
+/* Barra superior */
+header{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:20px clamp(20px,6vw,86px)}
+.brand{display:flex;align-items:center;gap:13px;font-weight:800;letter-spacing:.08em;font-size:.95rem;color:var(--azul)}
+.mark{width:44px;height:44px;border:2px solid var(--azul);border-radius:50%;display:grid;place-items:center;font-size:1.15rem;font-weight:800}
+.brand small{font-weight:500;letter-spacing:.04em}
+.toplink{font-weight:700;color:var(--azul);border-bottom:2px solid var(--azul);padding-bottom:3px}
+
+/* Portada */
+.hero{margin:18px auto 0;width:min(calc(100% - 48px),1240px);padding:clamp(48px,7vw,92px) clamp(26px,6vw,80px);border-radius:28px;background:var(--panel);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.eyebrow{color:var(--petroleo);text-transform:uppercase;letter-spacing:.16em;font-size:.82rem;font-weight:800}
+h1{font-size:clamp(2.7rem,7vw,5.4rem);line-height:1;max-width:900px;margin:18px 0 22px;font-weight:800;color:var(--azul)}
+.hero p{max-width:740px;margin:0;color:var(--azul);font-size:clamp(1.1rem,2vw,1.3rem);line-height:1.65}
+.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 24px;border-radius:999px;font-weight:800}
+.primary{background:var(--azul);color:#fff}
+.secondary{border:2px solid var(--azul);color:var(--azul)}
+.btn:hover{filter:brightness(1.15)}
+
+/* Contenido */
+main{max-width:1240px;margin:auto;padding:56px 24px 72px}
+.section-head{display:inline-block;max-width:860px;margin-bottom:30px;padding:26px 30px;border-radius:24px;background:var(--panel);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.kicker{color:var(--petroleo);font-size:.82rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
+h2{font-size:clamp(2rem,4vw,2.8rem);margin:9px 0 12px;color:var(--azul)}
+.section-head p{margin:0;color:var(--azul);font-size:1.13rem;line-height:1.6}
 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.card{display:flex;flex-direction:column;min-height:235px;padding:27px;background:#fff;border:1px solid var(--borde);border-radius:24px;box-shadow:0 12px 35px rgba(20,38,65,.12);transition:transform .2s,border-color .2s}
-.card:hover{transform:translateY(-4px);border-color:var(--petroleo-solido)}
+.card{display:flex;flex-direction:column;min-height:215px;padding:27px;background:rgba(255,255,255,.93);border-radius:24px;box-shadow:0 14px 36px rgba(20,38,65,.18);transition:transform .2s}
+a.card:hover{transform:translateY(-4px)}
 .card-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.number{color:var(--petroleo-solido);font-size:.8rem;letter-spacing:.13em;font-weight:800}
-.symbol{width:46px;height:46px;display:grid;place-items:center;background:rgba(1,91,120,.40);color:var(--azul-oscuro-solido);border-radius:15px;font-weight:800;font-size:1.05rem}
-.card h3{color:var(--azul-oscuro-solido);font-size:1.55rem;margin:19px 0 9px}
+.num{color:var(--petroleo);font-size:.8rem;letter-spacing:.13em;font-weight:800}
+.symbol{width:46px;height:46px;display:grid;place-items:center;background:rgba(1,91,120,.30);color:var(--azul);border-radius:15px;font-weight:800}
+.card h3{color:var(--azul);font-size:1.5rem;margin:18px 0 9px}
 .card p{color:var(--gris);font-size:1.04rem;line-height:1.55;margin:0}
-.card-bottom{margin-top:auto;padding-top:20px;color:var(--petroleo-solido);font-weight:800}
-.notice{margin-top:38px;background:rgba(1,91,120,.40);border-radius:24px;padding:25px 29px;color:var(--gris);line-height:1.6}
-.notice strong{color:var(--azul-oscuro-solido)}
-footer{background:#EAF8FC;text-align:center;padding:27px 20px;color:var(--gris);line-height:1.6}
+.card-bottom{margin-top:auto;padding-top:20px;color:var(--petroleo);font-weight:800}
+.cta,.notice{margin-top:38px;background:rgba(255,255,255,.75);border-radius:26px;padding:clamp(24px,4vw,40px);color:var(--azul);line-height:1.6}
+.cta{display:flex;justify-content:space-between;align-items:center;gap:22px;flex-wrap:wrap}
+.cta h3{font-size:1.8rem;margin:0 0 8px}
+.cta p{margin:0;max-width:650px}
+.cta .btn{background:var(--azul);color:#fff}
+footer{text-align:center;padding:28px 20px;color:var(--azul);line-height:1.6;background:rgba(255,255,255,.45)}
+
 @media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:580px){.grid{grid-template-columns:1fr}.topbar{padding:15px 20px}.top-link{font-size:.9rem}.card{min-height:205px}}
-
-
-/* Fondo tipo burbujas: degradados suaves, difuminados y superpuestos */
-.hero{
-  margin:28px auto 0;
-  width:min(calc(100% - 48px),1240px);
-  border-radius:28px;
-  overflow:hidden;
-  position:relative;
-  isolation:isolate;
-  padding:clamp(58px,8vw,100px) clamp(28px,7vw,88px) 76px;
-  color:#142641;
-  background:
-    radial-gradient(ellipse at 18% 25%, rgba(1,91,120,.40) 0%, rgba(1,91,120,.22) 22%, transparent 48%),
-    radial-gradient(ellipse at 72% 28%, rgba(20,38,65,.50) 0%, rgba(20,38,65,.24) 25%, transparent 53%),
-    radial-gradient(ellipse at 42% 88%, rgba(1,91,120,.40) 0%, rgba(1,91,120,.18) 24%, transparent 52%),
-    radial-gradient(ellipse at 95% 82%, rgba(20,38,65,.50) 0%, rgba(20,38,65,.20) 20%, transparent 45%),
-    linear-gradient(135deg,#73CEEB 0%,#8DD7ED 48%,#73CEEB 100%);
-  box-shadow:0 18px 48px rgba(20,38,65,.10);
-}
-.hero:before{
-  content:"";
-  position:absolute;
-  z-index:-1;
-  inset:-18%;
-  pointer-events:none;
-  background:
-    radial-gradient(ellipse 34% 27% at 20% 38%, rgba(1,91,120,.30) 0%, rgba(1,91,120,.16) 42%, transparent 74%),
-    radial-gradient(ellipse 27% 35% at 60% 18%, rgba(20,38,65,.34) 0%, rgba(20,38,65,.16) 46%, transparent 76%),
-    radial-gradient(ellipse 38% 28% at 72% 72%, rgba(1,91,120,.30) 0%, rgba(1,91,120,.14) 45%, transparent 78%),
-    radial-gradient(ellipse 22% 24% at 35% 86%, rgba(20,38,65,.25) 0%, rgba(20,38,65,.12) 48%, transparent 78%);
-  filter:blur(22px);
-  transform:rotate(-8deg) scale(1.08);
-}
-.hero:after{
-  content:"";
-  position:absolute;
-  z-index:-1;
-  inset:0;
-  pointer-events:none;
-  background:
-    radial-gradient(circle at 13% 18%, rgba(255,255,255,.22) 0 2%, transparent 2.8%),
-    radial-gradient(circle at 83% 22%, rgba(255,255,255,.20) 0 1.5%, transparent 2.4%),
-    radial-gradient(circle at 91% 68%, rgba(255,255,255,.18) 0 2.2%, transparent 3%);
-  filter:blur(5px);
-}
-.hero .eyebrow{color:#142641;position:relative;z-index:1}
-.hero h1,.hero p,.hero .actions{position:relative;z-index:1}
-.hero h1{color:#142641;text-shadow:0 1px 0 rgba(255,255,255,.15)}
-.hero p{color:#183C54}
-.hero .primary{background:#142641;color:#fff}
-.hero .secondary{border:1px solid rgba(20,38,65,.55);color:#142641;background:rgba(255,255,255,.16)}
-header,.topbar{background:#73CEEB!important;color:#142641!important;border-bottom:1px solid rgba(20,38,65,.12)}
-.brand,.toplink,.top-link,.navlink{color:#142641!important}
-.mark,.brand-mark{border-color:rgba(20,38,65,.45)!important}
-main{position:relative}
-.card{background:#fff;border:1px solid rgba(1,91,120,.18)!important;box-shadow:0 12px 32px rgba(20,38,65,.07)!important}
-.card:hover{border-color:rgba(1,91,120,.40)!important}
-.num,.number,.section-kicker,.eyebrow.alt{color:#015B78!important}
-.card h3,h2,.cta h3{color:#142641!important}
-.cta,.notice{background:rgba(115,206,235,.22)!important;border:1px solid rgba(1,91,120,.15)}
-.cta .btn{background:#015B78!important;color:#fff!important}
-footer{background:#EAF8FC!important;color:#526575!important}
-@media(max-width:560px){.hero{width:calc(100% - 28px);margin-top:14px;border-radius:22px}}
-
+@media(max-width:580px){.grid{grid-template-columns:1fr}header{padding:15px 20px}.hero{width:calc(100% - 28px);border-radius:22px}.toplink{font-size:.9rem}.card{min-height:190px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<header class="topbar">
-  <a class="brand" href="index.html">
-    <span class="brand-mark">D</span>
-    <span>DIVERSIFICACIÓN<br><small style="font-weight:500;letter-spacing:.04em">RECURSOS DE APRENDIZAJE</small></span>
-  </a>
-  <a class="top-link" href="index.html">← Volver al inicio</a>
+<svg class="bg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <path class="p" d="M0 800 L0 500 C110 440 250 490 340 580 C420 660 520 630 600 690 C640 720 660 765 680 800 Z"/>
+  <path class="p" d="M1200 500 C1100 470 980 510 905 590 C845 655 850 735 900 800 L1200 800 Z"/>
+  <path class="p" d="M830 0 C850 70 930 95 1000 70 C1050 50 1070 20 1075 0 Z"/>
+  <path class="p" d="M60 190 C60 120 130 80 190 110 C240 140 230 220 200 300 C170 380 210 430 190 470 C150 520 80 470 60 380 C45 320 60 250 60 190 Z"/>
+  <path class="n" d="M520 800 C560 650 610 570 690 480 C770 390 890 370 955 290 C1015 215 1110 150 1200 170 L1200 340 C1120 380 1045 425 985 475 C905 545 885 640 765 700 C700 735 665 770 645 800 Z"/>
+  <path class="n" d="M300 0 C285 80 225 140 165 190 C105 240 65 300 115 340 C175 380 265 300 335 230 C405 160 470 90 450 0 Z"/>
+  <path class="n" d="M1200 330 C1120 300 1050 320 1000 350 C960 375 985 395 1040 385 C1110 375 1170 360 1200 365 Z"/>
+  <circle class="n" cx="1010" cy="150" r="14"/>
+</svg>
+<header>
+  <a class="brand" href="index.html"><span class="mark">D</span><span>DIVERSIFICACIÓN<br><small>RECURSOS DE APRENDIZAJE</small></span></a>
+  <a class="toplink" href="index.html">← Volver al inicio</a>
 </header>
 
 <section class="hero">
@@ -135,43 +96,41 @@ footer{background:#EAF8FC!important;color:#526575!important}
 </section>
 
 <main>
-  <section class="section-head">
-    <div class="section-kicker">Tu espacio de aprendizaje</div>
+  <div class="section-head">
+    <div class="kicker">Tu espacio de aprendizaje</div>
     <h2>Explora las áreas</h2>
     <p>Cada área reúne recursos organizados por temas. Ingresa a la que te interese y descubre sus contenidos.</p>
-  </section>
-
+  </div>
   <div class="grid">
     <a class="card" href="artes.html">
-      <div class="card-top"><span class="number">ÁREA 01</span><span class="symbol">AR</span></div>
+      <div class="card-top"><span class="num">ÁREA 01</span><span class="symbol">AR</span></div>
       <h3>Artes</h3><p>Creación, expresión y exploración de diferentes manifestaciones artísticas.</p><span class="card-bottom">Explorar área →</span>
     </a>
     <a class="card" href="ciencias.html">
-      <div class="card-top"><span class="number">ÁREA 02</span><span class="symbol">CI</span></div>
+      <div class="card-top"><span class="num">ÁREA 02</span><span class="symbol">CI</span></div>
       <h3>Ciencias</h3><p>Preguntas, fenómenos y experiencias para comprender el mundo desde el conocimiento científico.</p><span class="card-bottom">Explorar área →</span>
     </a>
     <a class="card" href="datos.html">
-      <div class="card-top"><span class="number">ÁREA 03</span><span class="symbol">DA</span></div>
+      <div class="card-top"><span class="num">ÁREA 03</span><span class="symbol">DA</span></div>
       <h3>Datos</h3><p>Información, análisis, visualización y comunicación de hallazgos.</p><span class="card-bottom">Explorar área →</span>
     </a>
     <a class="card" href="enfermeria.html">
-      <div class="card-top"><span class="number">ÁREA 04</span><span class="symbol">EN</span></div>
+      <div class="card-top"><span class="num">ÁREA 04</span><span class="symbol">EN</span></div>
       <h3>Enfermería</h3><p>Aprendizajes relacionados con el cuidado, la salud y la formación en enfermería.</p><span class="card-bottom">Explorar área →</span>
     </a>
     <a class="card" href="habilidades-aprendizaje.html">
-      <div class="card-top"><span class="number">ÁREA 05</span><span class="symbol">HA</span></div>
+      <div class="card-top"><span class="num">ÁREA 05</span><span class="symbol">HA</span></div>
       <h3>Habilidades para el aprendizaje</h3><p>Estrategias para fortalecer la autonomía, la organización y el aprendizaje a lo largo de la vida.</p><span class="card-bottom">Explorar área →</span>
     </a>
     <a class="card" href="ingenieria.html">
-      <div class="card-top"><span class="number">ÁREA 06</span><span class="symbol">IN</span></div>
+      <div class="card-top"><span class="num">ÁREA 06</span><span class="symbol">IN</span></div>
       <h3>Ingeniería</h3><p>Diseño, experimentación y resolución creativa de problemas.</p><span class="card-bottom">Explorar área →</span>
     </a>
     <a class="card" href="mvz.html">
-      <div class="card-top"><span class="number">ÁREA 07</span><span class="symbol">MVZ</span></div>
+      <div class="card-top"><span class="num">ÁREA 07</span><span class="symbol">MVZ</span></div>
       <h3>Medicina Veterinaria y Zootecnia</h3><p>Recursos y experiencias sobre animales, salud, bienestar y producción animal.</p><span class="card-bottom">Explorar área →</span>
     </a>
   </div>
-
   <div class="notice"><strong>¿Cómo navegar?</strong> Selecciona cualquiera de las siete áreas. Dentro de cada una encontrarás categorías temáticas que organizan los recursos disponibles.</div>
 </main>
 <footer>Diversificación · Recursos de aprendizaje<br>Un espacio para explorar y aprender en comunidad.</footer>

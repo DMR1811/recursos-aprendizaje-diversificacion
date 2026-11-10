@@ -24,4 +24,84 @@ h2,.card h3,.resource h3{color:#7654C5!important}
 .credit strong{color:#7654C5!important}
 footer{background:#EAF6AD!important;color:#625879!important}
 
+
+/* Identidad visual de Artes: burbujas suaves y degradados */
+:root{
+  --artes-morado:#8B6BDA;
+  --artes-morado-profundo:#7654C5;
+  --artes-lima:#EAF6AD;
+  --artes-blanco:#FFFFFF;
+  --artes-texto:#30264A;
+  --artes-gris:#625879;
+  --artes-panel:rgba(255,255,255,.72);
+}
+body{
+  background:
+    radial-gradient(ellipse 38% 34% at 8% 12%, rgba(139,107,218,.34) 0%, rgba(139,107,218,.17) 42%, transparent 76%),
+    radial-gradient(ellipse 35% 38% at 88% 18%, rgba(234,246,173,.82) 0%, rgba(234,246,173,.38) 45%, transparent 78%),
+    radial-gradient(ellipse 42% 34% at 70% 82%, rgba(139,107,218,.26) 0%, rgba(139,107,218,.12) 48%, transparent 78%),
+    radial-gradient(ellipse 34% 30% at 12% 88%, rgba(234,246,173,.72) 0%, rgba(234,246,173,.28) 46%, transparent 78%),
+    linear-gradient(135deg,#FFFFFF 0%,#FBFAFF 48%,#F8FBEA 100%) !important;
+  background-attachment:fixed !important;
+  color:var(--artes-texto)!important;
+}
+.topbar{
+  background:rgba(255,255,255,.58)!important;
+  color:var(--artes-texto)!important;
+  border-bottom:1px solid rgba(139,107,218,.15);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
+.brand,.navlink{color:var(--artes-morado-profundo)!important}
+.brand-mark{border-color:rgba(139,107,218,.55)!important}
+.navlink{border-color:rgba(139,107,218,.48)!important}
+.hero{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  border:1px solid rgba(139,107,218,.14);
+  background:
+    radial-gradient(ellipse 40% 80% at 5% 10%, rgba(234,246,173,.72) 0%, transparent 75%),
+    radial-gradient(ellipse 42% 75% at 92% 80%, rgba(139,107,218,.32) 0%, transparent 76%),
+    radial-gradient(ellipse 35% 70% at 60% 0%, rgba(139,107,218,.18) 0%, transparent 78%),
+    linear-gradient(125deg,#FFFFFF 0%,#F8F5FF 48%,#F9FCEB 100%)!important;
+  color:var(--artes-texto)!important;
+  box-shadow:0 18px 48px rgba(75,53,130,.08);
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:-20%;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse 30% 26% at 18% 30%,rgba(139,107,218,.23) 0%,rgba(139,107,218,.10) 48%,transparent 78%),
+    radial-gradient(ellipse 28% 35% at 72% 22%,rgba(234,246,173,.72) 0%,rgba(234,246,173,.28) 48%,transparent 80%),
+    radial-gradient(ellipse 38% 27% at 76% 78%,rgba(139,107,218,.22) 0%,rgba(139,107,218,.09) 48%,transparent 80%),
+    radial-gradient(ellipse 22% 26% at 28% 88%,rgba(234,246,173,.58) 0%,rgba(234,246,173,.20) 50%,transparent 80%);
+  filter:blur(25px);
+  transform:rotate(-7deg) scale(1.08);
+}
+.hero .eyebrow{color:var(--artes-morado-profundo)!important;position:relative;z-index:1}
+.hero h1{color:var(--artes-morado-profundo)!important;position:relative;z-index:1}
+.hero p{color:var(--artes-texto)!important;position:relative;z-index:1}
+main{position:relative}
+.kicker,.tag,.arrow{color:var(--artes-morado-profundo)!important}
+h2,.card h3,.resource h3{color:var(--artes-morado-profundo)!important}
+.card,.resource{
+  background:rgba(255,255,255,.92)!important;
+  border:1px solid rgba(139,107,218,.20)!important;
+  box-shadow:0 14px 36px rgba(75,53,130,.08)!important;
+  backdrop-filter:blur(7px);
+}
+.card:hover{border-color:var(--artes-morado)!important;box-shadow:0 18px 42px rgba(75,53,130,.13)!important}
+.symbol{background:var(--artes-lima)!important;color:var(--artes-texto)!important}
+.resource-link{background:var(--artes-morado)!important;color:#FFFFFF!important}
+.resource-link:hover{background:var(--artes-morado-profundo)!important}
+.credit{color:var(--artes-gris)!important}
+.credit strong{color:var(--artes-morado-profundo)!important}
+.info{background:rgba(234,246,173,.78)!important;color:var(--artes-texto)!important;border:1px solid rgba(139,107,218,.10)}
+footer{background:rgba(234,246,173,.78)!important;color:var(--artes-gris)!important}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
 </style></head><body><header class="topbar"><a class="brand" href="recursos.html"><span class="brand-mark">D</span><span>DIVERSIFICACIÓN<br><small style="font-weight:500;letter-spacing:.04em">RECURSOS DE APRENDIZAJE</small></span></a><nav class="navlinks"><a class="navlink" href="artes.html">← Área de Artes</a><a class="navlink" href="recursos.html">Todas las áreas</a></nav></header><section class="hero"><div class="eyebrow">Artes · Categoría</div><h1>Música.</h1><p>Acércate a recursos digitales para explorar y fortalecer tus procesos de aprendizaje musical.</p></section><main><div class="kicker">Biblioteca de recursos</div><h2>Materiales para explorar</h2><p class="intro">Consulta los materiales disponibles y conoce a las personas tutoras que los elaboraron.</p><section class="resource-list"><article class="resource"><div class="resource-head"><div><div class="tag">Recurso web</div><h3>Recurso digital de Música</h3><p>Accede al recurso web del área de Música.</p></div></div><p class="credit"><strong>Elaborado por:</strong> Fabián Bejarano · Tutor del área de Música.</p><a class="resource-link" href="https://sae-beryl.vercel.app/" target="_blank" rel="noopener">Visitar recurso web ↗</a></article></section><div class="info"><strong>Explora otras categorías:</strong> puedes regresar al área de Artes para consultar los demás recursos disponibles.</div></main><footer>Diversificación · Área de Artes<br>Un espacio para explorar y aprender en comunidad.</footer></body></html>

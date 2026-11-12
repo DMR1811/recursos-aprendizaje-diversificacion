@@ -87,6 +87,37 @@ footer{text-align:center;padding:28px 20px;color:var(--azul);line-height:1.6;bac
   .gea-logo{width:66px;height:38px;padding:4px 6px}
 }
 
+
+/* Acciones con flecha: estilo de navegación minimalista */
+.arrow-action{
+  display:inline-flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:11px;
+  padding:8px 0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  color:var(--azul) !important;
+  font-weight:500;
+  text-decoration:none;
+  transition:opacity .2s ease;
+}
+.arrow-action:hover{opacity:.65;filter:none}
+.arrow-chevron{
+  display:inline-block;
+  flex:0 0 8px;
+  width:8px;
+  height:8px;
+  border-top:1.5px solid currentColor;
+  border-right:1.5px solid currentColor;
+  transform:rotate(45deg);
+}
+.actions .arrow-action{font-size:1rem}
+.cta .arrow-action{font-size:1rem}
+.toplink.arrow-action{font-size:1rem;border-bottom:0 !important;padding:8px 0 !important}
+
 </style>
 </head>
 <body>
@@ -102,7 +133,7 @@ footer{text-align:center;padding:28px 20px;color:var(--azul);line-height:1.6;bac
 </svg>
 <header>
   <a class="brand" href="index.html"><img class="gea-logo" src="logogeanuevo.png" alt="Logo GEA"><span>DIVERSIFICACIÓN<br><small>RECURSOS DE APRENDIZAJE</small></span></a>
-  <a class="toplink" href="https://forms.gle/8cNH4RV7LXHyxZp46" target="_blank" rel="noopener">Registro de acceso ↗</a>
+  <a class="toplink arrow-action" href="https://forms.gle/8cNH4RV7LXHyxZp46" target="_blank" rel="noopener"><span>Registro de acceso</span><span class="arrow-chevron" aria-hidden="true"></span></a>
 </header>
 
 <section class="hero">
@@ -110,7 +141,7 @@ footer{text-align:center;padding:28px 20px;color:var(--azul);line-height:1.6;bac
   <h1>Un espacio para<br>diversificar el aprendizaje.</h1>
   <p>Encuentra recursos, experiencias y herramientas que acompañan los procesos de aprendizaje de Diversificación. Explora distintas áreas del conocimiento y descubre nuevas formas de aprender.</p>
   <div class="actions">
-    <a class="btn primary" href="https://forms.gle/8cNH4RV7LXHyxZp46" target="_blank" rel="noopener">Ingresar al formulario →</a>
+    <a class="btn primary arrow-action" href="https://forms.gle/8cNH4RV7LXHyxZp46" target="_blank" rel="noopener"><span>Ingresar al formulario</span><span class="arrow-chevron" aria-hidden="true"></span></a>
     <a class="btn secondary" href="#areas">Conocer el espacio</a>
   </div>
 </section>
@@ -132,7 +163,7 @@ footer{text-align:center;padding:28px 20px;color:var(--azul);line-height:1.6;bac
   </div>
   <section class="cta">
     <div><h3>Comienza tu recorrido</h3><p>Realiza el registro mediante el formulario. Allí encontrarás el acceso dispuesto para la comunidad participante de Diversificación.</p></div>
-    <a class="btn" href="https://forms.gle/8cNH4RV7LXHyxZp46" target="_blank" rel="noopener">Registrarme ↗</a>
+    <a class="btn arrow-action" href="https://forms.gle/8cNH4RV7LXHyxZp46" target="_blank" rel="noopener"><span>Registrarme</span><span class="arrow-chevron" aria-hidden="true"></span></a>
   </section>
 </main>
 <footer>Diversificación · Recursos de aprendizaje<br>Un espacio para explorar y aprender en comunidad.</footer>

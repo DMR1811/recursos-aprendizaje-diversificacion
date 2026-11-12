@@ -59,6 +59,23 @@ footer{text-align:center;padding:28px 20px;color:var(--texto);line-height:1.6;ba
 @media(max-width:900px){.grid{grid-template-columns:1fr}}
 @media(max-width:580px){header{padding:15px 20px;align-items:flex-start}.hero{width:calc(100% - 28px);border-radius:22px}.toplink{font-size:.9rem}.card{padding:21px}.resource{padding:22px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+
+/* Identidad GEA adaptada a la paleta de Ciencias */
+.gea-logo{
+  width:78px;
+  height:42px;
+  object-fit:contain;
+  display:block;
+  padding:4px 7px;
+  background:#009255;
+  border:1px solid rgba(219,230,76,.95);
+  border-radius:8px;
+}
+.brand{gap:13px}
+@media(max-width:580px){
+  .gea-logo{width:66px;height:38px;padding:4px 6px}
+}
+
 </style></head><body><svg class="bg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
 <path class="p" d="M0 800 L0 500 C110 440 250 490 340 580 C420 660 520 630 600 690 C640 720 660 765 680 800 Z"/>
 <path class="p" d="M1200 500 C1100 470 980 510 905 590 C845 655 850 735 900 800 L1200 800 Z"/>
@@ -68,7 +85,7 @@ footer{text-align:center;padding:28px 20px;color:var(--texto);line-height:1.6;ba
 <path class="n" d="M300 0 C285 80 225 140 165 190 C105 240 65 300 115 340 C175 380 265 300 335 230 C405 160 470 90 450 0 Z"/>
 <path class="n" d="M1200 330 C1120 300 1050 320 1000 350 C960 375 985 395 1040 385 C1110 375 1170 360 1200 365 Z"/>
 <circle class="n" cx="1010" cy="150" r="14"/></svg>
-<header><a class="brand" href="recursos.html"><span class="mark">D</span><span>DIVERSIFICACIÓN<br><small>RECURSOS DE APRENDIZAJE</small></span></a><nav style="display:flex;gap:22px;flex-wrap:wrap"><a class="toplink" href="ciencias.html">← Área de Ciencias</a><a class="toplink" href="recursos.html">Todas las áreas</a></nav></header>
+<header><a class="brand" href="recursos.html"><img class="gea-logo" src="logogeanuevo.png" alt="Logo GEA"><span>DIVERSIFICACIÓN<br><small>RECURSOS DE APRENDIZAJE</small></span></a><nav style="display:flex;gap:22px;flex-wrap:wrap"><a class="toplink" href="ciencias.html">← Área de Ciencias</a><a class="toplink" href="recursos.html">Todas las áreas</a></nav></header>
 <section class="hero"><div class="eyebrow">Ciencias · Disciplina</div><h1>Matemáticas.</h1><p>Consulta herramientas de cálculo, programación y recursos para el aprendizaje matemático.</p></section>
 <main><div class="section-head"><div class="kicker">Biblioteca de recursos</div><h2>Materiales para explorar</h2><p>Consulta los materiales disponibles y conoce a la persona tutora del área.</p></div>
 <section class="resource-list"><article class="resource"><div class="tag">Recurso digital · Google Colab</div><h3>Cuaderno de trabajo en Google Colab</h3><p>Entorno de trabajo para explorar y desarrollar actividades matemáticas y computacionales.</p><p class="credit"><strong>Elaborado por:</strong> Maira Florez · Tutora del área de Matemáticas.</p><a class="resource-link" href="https://colab.research.google.com/drive/1DQYiysGucNVKg9DKVlW088_NzDaP0EWC" target="_blank" rel="noopener noreferrer">Abrir Google Colab ↗</a></article>

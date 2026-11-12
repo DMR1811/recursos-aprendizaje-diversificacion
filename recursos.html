@@ -72,28 +72,19 @@ footer{text-align:center;padding:28px 20px;color:var(--azul);line-height:1.6;bac
 @media(max-width:580px){.grid{grid-template-columns:1fr}header{padding:15px 20px}.hero{width:calc(100% - 28px);border-radius:22px}.toplink{font-size:.9rem}.card{min-height:190px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
 
-/* Flechas minimalistas: trazo fino, sin círculo ni fondo */
-.arrow-link{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  text-decoration:none;
+/* Identidad GEA */
+.gea-logo{
+  width:78px;
+  height:42px;
+  object-fit:contain;
+  display:block;
+  padding:4px 7px;
+  background:#142641;
+  border-radius:8px;
 }
-.arrow-icon{
-  display:inline-block;
-  flex:0 0 8px;
-  width:8px;
-  height:8px;
-  border-top:1.5px solid currentColor;
-  border-right:1.5px solid currentColor;
-}
-.arrow-icon.left{transform:rotate(-135deg)}
-.arrow-icon.right{transform:rotate(45deg)}
-.arrow-link:hover{opacity:.68}
-.card-bottom{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
+.brand{gap:13px}
+@media(max-width:580px){
+  .gea-logo{width:66px;height:38px;padding:4px 6px}
 }
 
 </style>
@@ -110,8 +101,8 @@ footer{text-align:center;padding:28px 20px;color:var(--azul);line-height:1.6;bac
   <circle class="n" cx="1010" cy="150" r="14"/>
 </svg>
 <header>
-  <a class="brand" href="index.html"><span class="mark">D</span><span>DIVERSIFICACIÓN<br><small>RECURSOS DE APRENDIZAJE</small></span></a>
-  <a class="toplink arrow-link" href="index.html"><span class="arrow-icon left" aria-hidden="true"></span><span>Volver al inicio</span></a>
+  <a class="brand" href="index.html"><img class="gea-logo" src="logogeanuevo.png" alt="Logo GEA"><span>DIVERSIFICACIÓN<br><small>RECURSOS DE APRENDIZAJE</small></span></a>
+  <a class="toplink" href="index.html">← Volver al inicio</a>
 </header>
 
 <section class="hero">
@@ -129,31 +120,31 @@ footer{text-align:center;padding:28px 20px;color:var(--azul);line-height:1.6;bac
   <div class="grid">
     <a class="card" href="artes.html">
       <div class="card-top"><span class="num">ÁREA 01</span><span class="symbol">AR</span></div>
-      <h3>Artes</h3><p>Creación, expresión y exploración de diferentes manifestaciones artísticas.</p><span class="card-bottom">Explorar área <span class="arrow-icon right" aria-hidden="true"></span></span>
+      <h3>Artes</h3><p>Creación, expresión y exploración de diferentes manifestaciones artísticas.</p><span class="card-bottom">Explorar área →</span>
     </a>
     <a class="card" href="ciencias.html">
       <div class="card-top"><span class="num">ÁREA 02</span><span class="symbol">CI</span></div>
-      <h3>Ciencias</h3><p>Preguntas, fenómenos y experiencias para comprender el mundo desde el conocimiento científico.</p><span class="card-bottom">Explorar área <span class="arrow-icon right" aria-hidden="true"></span></span>
+      <h3>Ciencias</h3><p>Preguntas, fenómenos y experiencias para comprender el mundo desde el conocimiento científico.</p><span class="card-bottom">Explorar área →</span>
     </a>
     <a class="card" href="datos.html">
       <div class="card-top"><span class="num">ÁREA 03</span><span class="symbol">DA</span></div>
-      <h3>Datos</h3><p>Información, análisis, visualización y comunicación de hallazgos.</p><span class="card-bottom">Explorar área <span class="arrow-icon right" aria-hidden="true"></span></span>
+      <h3>Datos</h3><p>Información, análisis, visualización y comunicación de hallazgos.</p><span class="card-bottom">Explorar área →</span>
     </a>
     <a class="card" href="enfermeria.html">
       <div class="card-top"><span class="num">ÁREA 04</span><span class="symbol">EN</span></div>
-      <h3>Enfermería</h3><p>Aprendizajes relacionados con el cuidado, la salud y la formación en enfermería.</p><span class="card-bottom">Explorar área <span class="arrow-icon right" aria-hidden="true"></span></span>
+      <h3>Enfermería</h3><p>Aprendizajes relacionados con el cuidado, la salud y la formación en enfermería.</p><span class="card-bottom">Explorar área →</span>
     </a>
     <a class="card" href="habilidades-aprendizaje.html">
       <div class="card-top"><span class="num">ÁREA 05</span><span class="symbol">HA</span></div>
-      <h3>Habilidades para el aprendizaje</h3><p>Estrategias para fortalecer la autonomía, la organización y el aprendizaje a lo largo de la vida.</p><span class="card-bottom">Explorar área <span class="arrow-icon right" aria-hidden="true"></span></span>
+      <h3>Habilidades para el aprendizaje</h3><p>Estrategias para fortalecer la autonomía, la organización y el aprendizaje a lo largo de la vida.</p><span class="card-bottom">Explorar área →</span>
     </a>
     <a class="card" href="ingenieria.html">
       <div class="card-top"><span class="num">ÁREA 06</span><span class="symbol">IN</span></div>
-      <h3>Ingeniería</h3><p>Diseño, experimentación y resolución creativa de problemas.</p><span class="card-bottom">Explorar área <span class="arrow-icon right" aria-hidden="true"></span></span>
+      <h3>Ingeniería</h3><p>Diseño, experimentación y resolución creativa de problemas.</p><span class="card-bottom">Explorar área →</span>
     </a>
     <a class="card" href="mvz.html">
       <div class="card-top"><span class="num">ÁREA 07</span><span class="symbol">MVZ</span></div>
-      <h3>Medicina Veterinaria y Zootecnia</h3><p>Recursos y experiencias sobre animales, salud, bienestar y producción animal.</p><span class="card-bottom">Explorar área <span class="arrow-icon right" aria-hidden="true"></span></span>
+      <h3>Medicina Veterinaria y Zootecnia</h3><p>Recursos y experiencias sobre animales, salud, bienestar y producción animal.</p><span class="card-bottom">Explorar área →</span>
     </a>
   </div>
   <div class="notice"><strong>¿Cómo navegar?</strong> Selecciona cualquiera de las siete áreas. Dentro de cada una encontrarás categorías temáticas que organizan los recursos disponibles.</div>

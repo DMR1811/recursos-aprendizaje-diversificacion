@@ -145,6 +145,27 @@ footer{text-align:center;padding:28px 20px;color:var(--azul);line-height:1.6;bac
   white-space:nowrap;
 }
 
+
+/* Botón de acceso UNAL: óvalo delineado como "Conocer el espacio" */
+.cta .access-outline{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  padding:14px 30px !important;
+  border:2px solid #142641 !important;
+  border-radius:999px !important;
+  background:transparent !important;
+  color:#142641 !important;
+  font-weight:800;
+  white-space:nowrap;
+  box-shadow:none !important;
+}
+.cta .access-outline:hover{
+  background:rgba(255,255,255,.22) !important;
+  opacity:1;
+}
+
 </style>
 </head>
 <body>
@@ -188,7 +209,7 @@ footer{text-align:center;padding:28px 20px;color:var(--azul);line-height:1.6;bac
   </div>
   <section class="cta">
     <div><h3>Ingresa con tu cuenta UNAL</h3><p>Antes de acceder a los recursos de aprendizaje debes realizar el registro utilizando tu cuenta institucional de la Universidad Nacional de Colombia.</p></div>
-<a class="btn arrow-action" href="https://forms.gle/8cNH4RV7LXHyxZp46" target="_blank" rel="noopener"><span>Ingresar con cuenta UNAL</span><span class="arrow-chevron" aria-hidden="true"></span></a>
+<a class="btn arrow-action access-outline" href="https://forms.gle/8cNH4RV7LXHyxZp46" target="_blank" rel="noopener"><span>Ingresar con cuenta UNAL</span><span class="arrow-chevron" aria-hidden="true"></span></a>
   </section>
 </main>
 <footer>Diversificación · Recursos de aprendizaje<br>Un espacio para explorar y aprender en comunidad.</footer>

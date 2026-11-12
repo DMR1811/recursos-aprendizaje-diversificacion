@@ -100,10 +100,32 @@ main .grid{grid-template-columns:1fr}
 }
 .area-back-link:hover{opacity:.7}
 
+
+/* Navegación unificada: retorno al área y a todas las áreas */
+.area-navigation{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:26px;
+  flex-wrap:wrap;
+}
+.area-navigation a{
+  display:inline-block;
+  color:#B0238A;
+  text-decoration:none;
+  font-weight:700;
+  border-bottom:2px solid currentColor;
+  padding:4px 0;
+  white-space:nowrap;
+}
+.area-navigation a:hover{opacity:.68}
+@media(max-width:600px){
+  .area-navigation{gap:16px;justify-content:flex-start}
+}
+
 </style>
 </head>
 <body>
-<a class="area-back-link" href="datos.html">&lt; Área de Datos</a>
 <svg class="bg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
 <path class="p" d="M0 0H1440V900H0Z" opacity=".08"/>
 <path class="n" d="M0 0C260 80 220 330 500 430S780 680 650 900H0Z"/>
@@ -111,7 +133,7 @@ main .grid{grid-template-columns:1fr}
 <path class="n" d="M1440 520C1260 600 1260 760 1120 900H1440Z"/>
 </svg>
 <header><a class="brand" href="recursos.html"><img class="gea-logo" src="logogeanuevo.png" alt="Logo GEA"><span>DIVERSIFICACIÓN<br><small>RECURSOS DE APRENDIZAJE</small></span></a>
-<a class="toplink" href="datos.html">&lt; Datos</a></header>
+<nav class="area-navigation" aria-label="Navegación"><a href="datos.html">&lt; Datos</a><a href="recursos.html">Todas las áreas</a></nav></header>
 <section class="hero"><div class="eyebrow">DATOS · INGENIERÍA DE SISTEMAS</div><h1>Ingeniería de Sistemas</h1><p>Material de aprendizaje para explorar la manipulación y visualización de datos, las bases de datos y SQL.</p></section>
 <main><section class="grid">
 <article class="resource"><div class="tag">RECURSO 01 · GITHUB</div><h3>Introducción, manipulación y visualización de datos</h3>

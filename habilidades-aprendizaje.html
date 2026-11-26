@@ -51,7 +51,19 @@ a.card:hover{transform:translateY(-4px);border-color:rgba(16,86,102,.55)}
 .author{font-size:.98rem;margin-top:10px!important;color:var(--petroleo)!important;font-weight:600}
 .resource-link{display:inline-flex;margin-top:16px;color:var(--petroleo);font-weight:800;transition:transform .2s}
 .note{margin-top:30px;padding:22px 26px;border-radius:20px;background:rgba(255,255,255,.43);line-height:1.55}
-footer{text-align:center;padding:25px;color:var(--texto);font-weight:600}
+footer{
+ width:100%;
+ margin:0;
+ padding:30px 24px;
+ box-sizing:border-box;
+ text-align:center;
+ color:var(--texto);
+ font-weight:600;
+ line-height:1.6;
+ background:rgba(255,255,255,.48);
+ backdrop-filter:blur(8px);
+ -webkit-backdrop-filter:blur(8px);
+}
 @media(max-width:760px){header{align-items:flex-start}.brand{font-size:.8rem}.logo-wrap{width:70px;height:40px;padding:4px 6px}.grid{grid-template-columns:1fr}.card{padding:21px}.hero{width:calc(100% - 28px)}main{padding:42px 16px 56px}}
 
 .poster-frame{

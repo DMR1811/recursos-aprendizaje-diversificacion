@@ -1,18 +1,18 @@
 <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Ingeniería: conocimiento para transformar · Ingeniería</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>
-:root{--azul:#135A71;--naranja:#E09C42;--blanco:#FFFFFF;--texto:#174C59;--panel:rgba(255,255,255,.48)}
+:root{--azul:#135A71;--naranja:#E09C42;--blanco:#FFFFFF;--texto:#174C59;--panel:rgba(255,255,255,.68)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;min-height:100vh;background:var(--azul);color:var(--texto);font-family:"Ancizar Sans",sans-serif;position:relative}
 a{color:inherit;text-decoration:none}
 a:focus-visible{outline:3px solid var(--naranja);outline-offset:3px}
 .bg{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
-.bg .o{fill:var(--naranja);fill-opacity:.34}.bg .w{fill:var(--blanco);fill-opacity:.34}
-header{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:20px clamp(20px,6vw,86px)}
+.bg .o{fill:var(--naranja);fill-opacity:.62}.bg .w{fill:var(--blanco);fill-opacity:.42}
+header{display:flex;align-items:center;justify-content:space-between;gap:18px;width:100%;padding:20px clamp(20px,6vw,86px)}
 .brand{display:flex;align-items:center;gap:13px;font-weight:800;letter-spacing:.08em;font-size:.95rem;color:var(--blanco)}
 .logo-wrap{width:88px;height:46px;border-radius:10px;background:var(--azul);border:2px solid var(--naranja);display:grid;place-items:center;overflow:hidden;padding:5px 8px;flex:0 0 auto}
 .logo-wrap img{width:100%;height:100%;object-fit:contain}
 .brand small{display:block;font-weight:500;letter-spacing:.04em}
-.toplinks{display:flex;gap:20px;flex-wrap:wrap;justify-content:flex-end}
+.toplinks{display:flex;gap:20px;flex-wrap:wrap;justify-content:flex-end;margin-left:auto}
 .toplink{font-weight:700;color:var(--blanco);border-bottom:2px solid var(--naranja);padding-bottom:3px}
 .hero{margin:18px auto 0;width:min(calc(100% - 48px),1240px);padding:clamp(44px,6vw,78px) clamp(26px,6vw,80px);border-radius:28px;background:var(--panel);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 .eyebrow,.kicker,.resource-tag{color:var(--azul);text-transform:uppercase;letter-spacing:.15em;font-size:.82rem;font-weight:800}
@@ -23,23 +23,23 @@ main{max-width:1240px;margin:auto;padding:54px 24px 64px}
 h2{font-size:clamp(1.9rem,4vw,2.7rem);margin:8px 0 10px;color:var(--azul)}
 .section-head p,.intro{margin:0;color:var(--azul);font-size:1.1rem;line-height:1.6}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-.card{display:flex;gap:20px;align-items:flex-start;min-height:170px;padding:25px;background:rgba(255,255,255,.95);border:1px solid rgba(224,156,66,.65);border-radius:24px;box-shadow:0 14px 36px rgba(10,50,65,.12);transition:transform .2s}
+.card{display:flex;gap:20px;align-items:flex-start;min-height:170px;padding:25px;background:rgba(255,255,255,.98);border:2px solid rgba(224,156,66,.95);border-radius:24px;box-shadow:0 14px 36px rgba(10,50,65,.12);transition:transform .2s}
 .card:hover{transform:translateY(-4px)}
-.symbol{flex:0 0 56px;width:56px;height:56px;display:grid;place-items:center;background:rgba(224,156,66,.28);color:var(--azul);border-radius:17px;font-weight:800;font-size:1.05rem}
+.symbol{flex:0 0 56px;width:56px;height:56px;display:grid;place-items:center;background:rgba(224,156,66,.52);color:var(--azul);border-radius:17px;font-weight:800;font-size:1.05rem}
 .card h3{font-size:1.4rem;line-height:1.15;margin:5px 0 9px;color:var(--azul)}
 .card p{margin:0;color:#49666D;line-height:1.5}
 .card-bottom{display:inline-flex;margin-top:15px;color:var(--azul);font-weight:800}
 .resource-list{display:grid;grid-template-columns:1fr;gap:18px}
-.resource-card{padding:26px 30px;background:rgba(255,255,255,.95);border:1px solid rgba(224,156,66,.55);border-radius:24px;box-shadow:0 14px 36px rgba(10,50,65,.10)}
+.resource-card{padding:26px 30px;background:rgba(255,255,255,.95);border:2px solid rgba(224,156,66,.82);border-radius:24px;box-shadow:0 14px 36px rgba(10,50,65,.10)}
 .resource-title{font-size:1.35rem;color:var(--azul);margin:9px 0}
 .resource-description{color:#526B70;line-height:1.55;margin:8px 0}
 .resource-credit{color:#526B70;line-height:1.55;margin:18px 0}
 .resource-credit strong{color:var(--azul);font-weight:800}
 .resource-button{display:inline-flex;margin-top:8px;padding:12px 21px;border-radius:999px;background:var(--azul);color:#fff;font-weight:800}
-.info,.note{margin-top:30px;padding:24px 28px;border-radius:24px;background:rgba(255,255,255,.48);backdrop-filter:blur(8px);line-height:1.6;color:var(--azul)}
-footer{width:100%;margin:0;padding:30px 24px;box-sizing:border-box;text-align:center;color:var(--azul);font-weight:600;line-height:1.6;background:rgba(255,255,255,.48);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.info,.note{margin-top:30px;padding:24px 28px;border-radius:24px;background:rgba(255,255,255,.68);backdrop-filter:blur(8px);line-height:1.6;color:var(--azul)}
+footer{width:100%;margin:0;padding:30px 24px;box-sizing:border-box;text-align:center;color:var(--azul);font-weight:600;line-height:1.6;background:rgba(255,255,255,.68);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 @media(max-width:760px){header{align-items:flex-start;flex-direction:column}.toplinks{justify-content:flex-start}.brand{font-size:.82rem}.grid{grid-template-columns:1fr}.card{padding:21px}.hero{width:calc(100% - 28px)}main{padding:40px 16px 52px}.resource-card{padding:22px}}
-</style></head><body><svg class="bg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><circle class="o" cx="180" cy="120" r="270"/><circle class="w" cx="1260" cy="170" r="300"/><circle class="o" cx="1120" cy="790" r="310"/><circle class="w" cx="420" cy="760" r="260"/><circle class="w" cx="760" cy="420" r="190"/></svg><header><div class="brand"><span class="logo-wrap"><img src="logogeanuevo.png" alt="Logo GEA"></span><span>DIVERSIFICACIÓN<small>RECURSOS DE APRENDIZAJE</small></span></a><a class="toplink" href="recursos.html">&lt; Portal general</a></header><section class="hero"><div class="eyebrow">ÁREA · INGENIERÍA</div><h1>Conocimiento para transformar y crear</h1><p>Explora recursos de aprendizaje de Ingeniería Civil, Ingeniería Mecánica, Ingeniería Económica, Gerencia y Gestión de Proyectos. Selecciona una categoría para descubrir sus recursos de aprendizaje.</p></section><main><div class="section-head"><div class="kicker">Rutas de exploración</div><h2>¿Qué te interesa explorar?</h2><p>Cada disciplina cuenta con un espacio propio donde encontrarás presentaciones, documentos y recursos digitales elaborados por sus tutoras y tutores.</p></div><section class="grid"><a class="card" href="ingenieria-civil.html"><div class="symbol">IC</div><div><h3>Ingeniería Civil</h3><p>Recursos para apoyar el aprendizaje en geología, materiales, prácticas de laboratorio y comunicación académica.</p><span class="card-bottom">Explorar categoría &gt;</span></div></a><a class="card" href="ingenieria-mecanica.html"><div class="symbol">IM</div><div><h3>Ingeniería Mecánica</h3><p>Materiales de aprendizaje relacionados con los fundamentos y materiales de ingeniería.</p><span class="card-bottom">Explorar categoría &gt;</span></div></a><a class="card" href="ingenieria-economica-gerencia.html">
+</style></head><body><svg class="bg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><circle class="o" cx="180" cy="120" r="270"/><circle class="w" cx="1260" cy="170" r="300"/><circle class="o" cx="1120" cy="790" r="310"/><circle class="w" cx="420" cy="760" r="260"/><circle class="w" cx="760" cy="420" r="190"/></svg><header><div class="brand"><span class="logo-wrap"><img src="logogeanuevo.png" alt="Logo GEA"></span><span>DIVERSIFICACIÓN<small>RECURSOS DE APRENDIZAJE</small></span><nav class="toplinks"><a class="toplink" href="recursos.html">&lt; Portal general</a></nav></header><section class="hero"><div class="eyebrow">ÁREA · INGENIERÍA</div><h1>Conocimiento para transformar y crear</h1><p>Explora recursos de aprendizaje de Ingeniería Civil, Ingeniería Mecánica, Ingeniería Económica, Gerencia y Gestión de Proyectos. Selecciona una categoría para descubrir sus recursos de aprendizaje.</p></section><main><div class="section-head"><div class="kicker">Rutas de exploración</div><h2>¿Qué te interesa explorar?</h2><p>Cada disciplina cuenta con un espacio propio donde encontrarás presentaciones, documentos y recursos digitales elaborados por sus tutoras y tutores.</p></div><section class="grid"><a class="card" href="ingenieria-civil.html"><div class="symbol">IC</div><div><h3>Ingeniería Civil</h3><p>Recursos para apoyar el aprendizaje en geología, materiales, prácticas de laboratorio y comunicación académica.</p><span class="card-bottom">Explorar categoría &gt;</span></div></a><a class="card" href="ingenieria-mecanica.html"><div class="symbol">IM</div><div><h3>Ingeniería Mecánica</h3><p>Materiales de aprendizaje relacionados con los fundamentos y materiales de ingeniería.</p><span class="card-bottom">Explorar categoría &gt;</span></div></a><a class="card" href="ingenieria-economica-gerencia.html">
  <div class="symbol">IEGP</div><div>
   <h3>Ingeniería Económica, Gerencia y Gestión de Proyectos</h3>
   <p>Recursos sobre conceptos de ingeniería económica, evaluación financiera y gestión de proyectos.</p>
